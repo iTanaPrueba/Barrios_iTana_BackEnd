@@ -1,4 +1,4 @@
-package com.iTana.Barrios.Prueba;
+package Itana.Prueba;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
