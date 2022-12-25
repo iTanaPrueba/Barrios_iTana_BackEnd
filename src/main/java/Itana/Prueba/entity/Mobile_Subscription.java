@@ -1,5 +1,6 @@
 package Itana.Prueba.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.io.Serializable;
 @Data
 @Entity
 @Table(name = "mobileSubscriptions")
+@JsonIgnoreProperties(value = {"id"}, allowGetters = true)
 public class Mobile_Subscription implements Serializable {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
