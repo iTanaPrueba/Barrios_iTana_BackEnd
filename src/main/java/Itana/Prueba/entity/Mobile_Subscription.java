@@ -8,18 +8,18 @@ import java.io.Serializable;
 
 @Data
 @Entity
-@Table(name = "mobileSubscriptions")
+@Table(name = "FTPMOSUB")
 @JsonIgnoreProperties(value = {"id"}, allowGetters = true)
 public class Mobile_Subscription implements Serializable {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long id;
-   @Column(name = "month")
+   @Column(name = "MSMON")
    private String month;
-   @Column(name = "network")
+   @Column(name = "MSNET")
    private String network;
-   @Column(name = "plan")
+   @Column(name = "MSPLA")
    private String plan;
-   @Column(name = "subscriptions")
+   @Column(name = "MSSUB")
    private Long subscriptions;
 }
