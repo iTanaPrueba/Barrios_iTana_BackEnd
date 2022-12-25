@@ -32,8 +32,8 @@ public class Mobile_SubscriptionController {
     }
 
     @PutMapping(path = "/{id}")
-    public ResponseEntity update(@PathVariable("id") Long id, Mobile_Subscription mobile_subscription){
+    public ResponseEntity update(Mobile_Subscription mobile_subscription, @PathVariable("id") Long id){
         mobile_subscriptionService.updateMobileSubscription(mobile_subscription, id);
-        return ResponseEntity.ok(HttpStatus.OK);
+        return ResponseEntity.status(HttpStatus.OK).body(mobile_subscriptionService.getByIdMobileSubscription(id));
     }
 }
